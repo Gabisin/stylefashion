@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/aquire');
+/*,*::after,*::before{
+    box-sizing: border-box;
+    font-family:'Marriweather',serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: var(--c1--3--);
+}*/
+ img{
+ max-width: 100%;
+}
+
+.row{
+    display: flex;
+}
+.flex{
+    flex-wrap: wrap;
+    gap: 2rem; ;
+}
+.flex>*{
+    flex: 1 1 25rem;
+}
+.column{
+    display: grid;
+}
+.container-main{
+    max-width: 90%;
+    margin: 0 auto;
+}
+/*Mavigtion*/
+nav ul{
+    align-items: center;
+    gap: 2em;
+
+}
+nav a{
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 0.2em 0;
+    text-transform: capitalize;
+}
+nav a:hover{
+    color: var(--c1--3--);
+}
+
+nav a::after{
+}
+nav a:hover::after{
+    width: 70%;
+}
+.toggleMenu{
+    cursor:pointer ;
+    background-image: url(./icones/icons8-cardápio-48.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:30px;
+    width: 30px;
+    height: 30px;
+    z-index: 1000;
+    transition: background-size 0.5s ease-in-out;
+    -webkit-transition: background-size 0.5s ease-in-out;
+    -moz-transition: background-size 0.5s ease-in-out;
+    -ms-transition: background-size 0.5s ease-in-out;
+    -o-transition: background-size 0.5s ease-in-out;
+}
+.toggleMenu.active{
+    position: fixed;
+    right: 5%;
+    background-image: url(./icones/icons8-excluir-50.png);
+    background-size: 25px;
+
+}
+.navigation{
+    position: absolute;
+    min-height: 0;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transform-origin:bottom ;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+.navigation.active{
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    background: var(--c1--1--);
+    min-height: 100%;
+    opacity: 1;
+    z-index: 999;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+/* Hero Section*/
+.hero{
+    background: var(--liner--2--),var(--liner--1--),url(./imagens/shoes\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+
+}
+.hero-content{
+    align-items: center;
+    min-height: 100vh;
+
+}
+/* End Hero Section*/
+
+
+/* slider*/
+.mySwiper, .fashion{
+    padding: 2em 0;
+}
+.mySwiper img,
+ .img img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover ;
+    box-shadow: var(--shadow--);
+}
+
+.swiper-button-next::after, .swiper-button-prev::after{
+    font-weight: 900;
+    color: var(--c1--3--);
+
+}/
+/*  End slider*/
+
+/*Fashion*/
+.flex>*.flex{
+    padding-top: 2em;
+
+}
+.fashion .flex:nth-of-type(odd){
+    flex-wrap: wrap-reverse;
+}
+.content{
+    position: relative;
+}
+.content::after{
+    content: "01";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Aladin',cursive;
+    font-size: clamp(100px,20vw,250px);
+    color:rgba(255, 255, 255, 0.2) ;
+    z-index: -1;
+}
+
+.flex:nth-of-type(2) .content::after{
+    content: "02";
+}
+.flex:nth-of-type(3) .content::after{
+    content: "03";
+}
+.content div{
+    align-self: center ;
+}
+h5{
+    position: relative;
+    font-weight: 900;
+    font-size: 18px;
+    text-transform: uppercase;
+    color:#fbd784;
+    letter-spacing: 0.025em;
+    align-items: center;
+    gap: 1rem;
+}
+hr{
+    color:#fbd784;
+    border: 0;
+    width: 10%;
+    background: var(--c1--3--);
+    border-radius: 100px;
+    -webkit-border-radius:100px ;
+    -moz-border-radius:100px ;
+    -ms-border-radius:100px ;
+    -o-border-radius:100px ;
+}
+h2{
+    align-items: center;
+     padding-top: 8rem;
+    color: #fbd784;
+    height: 10rem;
+    font-weight: 300;
+    font-size:clamp(35px,5vw,65px);
+    line-height:clamp(40px,5vw,70px);
+    text-transform: capitalize;
+    letter-spacing: 0.025em;
+   
+}
+.content h2{
+    padding: 4rem 0;
+}
+p{
+    padding-top: 1px;
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 300;
+
+}*/
+/* Page button*/
+.page-btn{
+    cursor: pointer;
+    align-items: center;
+    gap: 1.5em;
+    font-size: 18px;
+    color: var(--c1--3--);
+    fill: var(--c1--3--);
+    text-transform: lowerCase;
+    letter-spacing: 0.025em;
+    max-width: max-content;
+    border:0;
+    background: transparent;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+
+
+}
+.page-btn:hover{
+    color: var(--c1--2--);
+    fill: var(--c1--2--);
+    gap: 1em;
+
+}
+
+.content .page-btn{
+    margin-top: 2em;
+}
+/* End Fashion*/
+
+/* Footer CSS*/
+.footer__container{
+    background:#141414;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+#footer__logo{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.footer__links{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    
+    
+
+}
+.footer__link--wrapper{
+    display: flex;
+
+}
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+}
+.footer__link--items h2 {
+    margin-bottom: 16px;   
+}
+.footer__link--items > h2 {
+    color: #fff;
+}
+.footer__link--items a{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+.footer__link--items img{
+    width: 20px;
+    padding-right: 3px;
+}
+.footer__link--items a:hover{
+    color: #e9e9e9;
+    transition: 0.3s ease-out;
+
+}
+
+.social__icon--link{
+    color: #fff;
+    font-size: 24px;
+    width: 20px;
+}
+.social__media{
+    max-width: 1000px;
+    width: 100%;
+    justify-content: center;
+}
+.social__media--wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+.social__icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20px;
+}
+.social__logo{
+    color: #fff;
+    justify-self: flex-start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    align-items: center;
+    margin-bottom: 16px;
+
+
+}
+.website__rights{
+    color: #fff;
+}
+@media screen and (max-width:820px){
+    .footer__links{
+        padding-top: 2rem;
+    }
+    #footer__logo{
+        margin-bottom:2rem;
+    }
+    .website__rights{
+        margin-bottom: 2rem;
+    }
+    .footer__link--wrapper{
+        flex-direction: column;
+    }
+    .social__media--wrap{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:480px) {
+    .footer__link--items{
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+    
+}
+.container-moda{
+    /*services__cotaier*/
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+  
+   
+}
+
+
+
+@media screen and (min-width:1440px){
+    .container-main{
+        max-width: 1400px ;
+    }
+}
+@media screen and (min-width:925px) {
+    .navigation{
+        transform-origin: left;
+    }
+    .navigation.active{
+        position: relative;
+        background: transparent;   
+    }
+    
+}
+@media screen and (max-width:925px) {
+    nav ul{
+        flex-direction: column;
+    }
+    
+}
+
+

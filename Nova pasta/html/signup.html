@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/signin.css">
+    <title>Sign-up</title>
+</head>
+<body style="background: var(--c1--1--); --c1--1--:#a28f5e;--c1--2--:#ffffff;--c1--3--:#fbd784;--liner--1--:linear-gradient(100deg,rgba(11,29,38,0)0%,var(--c1--1--)100%);--liner--2--:linear-gradient(00deg,rgba(11,29,38,0)10%, rgba(11,29,38,0.8) 100%);--shadow--:0px 0px 16px 0px rgba(255,255,255,0.5); background: var(--c1--1--);">
+    <div class="container">
+        <div class="card">
+            <h1 style="padding-top: 20px;padding-bottom: 5rem;text-align: center;">Sign-up</h1>
+            <div id="msgError"></div>
+            <div id="msgSuccess"></div>
+            <form style="width: 20rem;" id="form" onsubmit="cadastrar(event)">
+                <div class="label-float">
+                    <input type="text" id="usuario" placeholder=" " required />
+                    <label id="labelUsuario" for="usuario">User </label>
+                </div>
+                <div class="label-float">
+                    <input type="password" id="senha" placeholder=" " required />
+                    <label id="labelSenha" for="senha">Password</label>
+                    <i id="verSenha" class="fa fa-eye" aria-hidden="true" onclick="toggleSenha()"></i>
+                </div>
+                <div class="label-float">
+                    <input type="password" id="confirmSenha" placeholder=" " required />
+                    <label id="labelConfirmSenha" for="confirmSenha">Confirm Password Senha</label>
+                    <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true" onclick="toggleConfirmSenha()"></i>
+                </div>
+                <div class="justify-center">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/signup.js"></script>
+</body>
+</html>
