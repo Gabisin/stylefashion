@@ -13,7 +13,6 @@
         <div  style="height: 100vh;width: 100vh;"  class="card">
             <h1 style="padding-top: 20px;padding-bottom: 5rem;text-align: center;"> Login</h1>
             <div id="msgError"></div>
-            <form style=" style="width: 20rem;"" id="form" onsubmit="entrar(event)">
                 <div style="font-weight: bold;color: black;" class="label-float">
                     <input type="text" id="usuario" placeholder=" " required />
                     <label id="userLabel" for="usuario">User</label>
@@ -24,7 +23,7 @@
                     <i class="fa fa-eye" aria-hidden="true" onclick="toggleSenha()"></i>
                 </div>
                 <div style="font-size: 1rem;outline: none;border: none;border-radius: 5px;margin-top: 1rem;align-items: center;" class="justify-center">
-                    <button type="submit">Sign-in</button>
+                    <button onclick="entrar()">Signin</button>
                 </div>
                 <div class="justify-center">
                     <hr />
@@ -32,7 +31,7 @@
                 <p>
                     <a href="../html/signup.html">Sign-up</a>
                 </p>
-            </form>
+            
         </div>
     </div> 
     <script src="../js/signin.js"></script>
